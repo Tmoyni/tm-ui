@@ -1,11 +1,18 @@
 import styled, { css } from "styled-components"; 
-import { ButtonProps } from "./Button"; 
 
 const baseStyles = css`
     display: inline-flex;
     align-items: center; 
     justify-content: center; 
     cursor: pointer;
+    &:focus-visible { 
+        outline: 2px solid Highlight; 
+        outline-offset: 2px; 
+    }
+    &:disabled { 
+        opacity: 0.6; 
+        cursor: not-allowed; 
+    }
 `;
 
 const variantStyles = {
@@ -23,7 +30,7 @@ const variantStyles = {
     `
 };
 
-export const StyledButton = styled.button<ButtonProps>`
+export const StyledButton = styled.button<{ $variant?: 'primary' | 'secondary' }>`
     ${baseStyles}
-    ${({ variant = "primary" }) => variantStyles[variant]}
+    ${({ $variant = "primary" }) => variantStyles[$variant]}
 `;

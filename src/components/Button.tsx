@@ -5,11 +5,20 @@ export type ButtonProps = {
     variant?: 'primary' | 'secondary'; 
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps> (({
     variant = 'primary', 
     className = '',
+    type= 'button',
     ...props
-}) => {
-    return <StyledButton className={className} variant={variant} {...props} />;
-}
-
+}, ref) => {
+    return (
+        <StyledButton 
+            ref={ref}
+            type={type}
+            className={className} 
+            $variant={variant} 
+            {...props} 
+        />
+    );
+})
+Button.displayName = 'Button';
