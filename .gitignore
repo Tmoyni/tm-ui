@@ -43,3 +43,6 @@ Thumbs.db
 *.swp
 *.swo
 scratchpad.*
+
+# Personal reference files
+COMPONENT_WORKFLOW.md
