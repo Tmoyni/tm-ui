@@ -48,16 +48,16 @@
     "esm",
     "accessibility"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "Triona Moynihan <triona.moynihan@gmail.com>",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/tm-ui.git"
+    "url": "https://github.com/Tmoyni/tm-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/tm-ui/issues"
+    "url": "https://github.com/Tmoyni/tm-ui/issues"
   },
-  "homepage": "https://github.com/yourusername/tm-ui#readme",
+  "homepage": "https://github.com/Tmoyni/tm-ui#readme",
   "publishConfig": {
     "access": "public"
   },
