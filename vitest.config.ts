@@ -12,6 +12,28 @@ const dirname =
 export default defineConfig({
   test: {
     projects: [
+      // Unit tests project
+      {
+        test: {
+          name: 'unit',
+          globals: true,
+          environment: 'jsdom',
+          setupFiles: ['.storybook/vitest.setup.ts'],
+          include: ['src/**/*.{test,spec}.{ts,tsx}'],
+          coverage: {
+            provider: 'v8',
+            reporter: ['text', 'json', 'html'],
+            include: ['src/**/*.{ts,tsx}'],
+            exclude: [
+              'src/**/*.stories.tsx',
+              'src/**/*.test.tsx',
+              'src/**/*.spec.tsx',
+              'src/stories/**',
+            ],
+          },
+        },
+      },
+      // Storybook tests project
       {
         extends: true,
         plugins: [
@@ -22,11 +44,11 @@ export default defineConfig({
         test: {
           name: 'storybook',
           browser: {
-        enabled: true,
-        headless: true,
-        provider: 'playwright',
-        instances: [{ browser: 'chromium' }]
-      },
+            enabled: true,
+            headless: true,
+            provider: 'playwright',
+            instances: [{ browser: 'chromium' }],
+          },
           setupFiles: ['.storybook/vitest.setup.ts'],
         },
       },
