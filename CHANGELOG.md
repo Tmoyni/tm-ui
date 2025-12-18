@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Button component with primary and secondary variants
 - Three-tier design token system (primitives, semantic, components)
+- New color scales: green, pink, red, yellow
 - Comprehensive test suite with 26 unit tests
 - ESLint and Prettier configuration
 - TypeScript strict mode configuration
@@ -32,6 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Node.js requirement updated to >=20 (from >=18)
 - Excluded sandbox files from TypeScript compilation
 - Enhanced TypeScript configuration with stricter compiler options
+- Updated color token scale from 50-900 to 100-1000 to match design system
+- Renamed blue color scale to brand scale for better semantic clarity
 
 ### Fixed
 - Hover and active states now properly guarded with `:not(:disabled)`
