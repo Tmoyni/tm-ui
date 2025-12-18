@@ -11,27 +11,27 @@ export const semantic = {
     // Brand colors
     brand: {
       primary: {
-        default: primitives.colors.blue[600],
-        hover: primitives.colors.blue[700],
-        active: primitives.colors.blue[800],
-        subtle: primitives.colors.blue[50],
-        subtleHover: primitives.colors.blue[100],
+        default: primitives.colors.brand[600],
+        hover: primitives.colors.brand[700],
+        active: primitives.colors.brand[800],
+        subtle: primitives.colors.brand[100],
+        subtleHover: primitives.colors.brand[200],
       },
       secondary: {
         default: primitives.colors.gray[500],
         hover: primitives.colors.gray[600],
         active: primitives.colors.gray[700],
-        subtle: primitives.colors.gray[50],
-        subtleHover: primitives.colors.gray[100],
+        subtle: primitives.colors.gray[100],
+        subtleHover: primitives.colors.gray[200],
       },
     },
     // Neutral colors for general UI
     neutral: {
-      default: primitives.colors.gray[200],
-      hover: primitives.colors.gray[300],
-      active: primitives.colors.gray[400],
-      subtle: primitives.colors.gray[50],
-      subtleHover: primitives.colors.gray[100],
+      default: primitives.colors.gray[300],
+      hover: primitives.colors.gray[400],
+      active: primitives.colors.gray[500],
+      subtle: primitives.colors.gray[100],
+      subtleHover: primitives.colors.gray[200],
     },
     // Text colors
     text: {
@@ -43,22 +43,22 @@ export const semantic = {
     },
     // Border colors
     border: {
-      default: primitives.colors.gray[300],
-      hover: primitives.colors.gray[400],
-      focus: primitives.colors.blue[500],
-      disabled: primitives.colors.gray[200],
+      default: primitives.colors.gray[400],
+      hover: primitives.colors.gray[500],
+      focus: primitives.colors.brand[600],
+      disabled: primitives.colors.gray[300],
     },
     // Background colors
     background: {
       primary: primitives.colors.white,
-      secondary: primitives.colors.gray[50],
-      tertiary: primitives.colors.gray[100],
-      disabled: primitives.colors.gray[100],
+      secondary: primitives.colors.gray[100],
+      tertiary: primitives.colors.gray[200],
+      disabled: primitives.colors.gray[200],
     },
     // State colors (for future use)
     state: {
       disabled: {
-        background: primitives.colors.gray[100],
+        background: primitives.colors.gray[200],
         text: primitives.colors.gray[400],
       },
     },
@@ -97,7 +97,7 @@ export const semantic = {
   effects: {
     focusRing: {
       width: primitives.borderWidth[2],
-      color: primitives.colors.blue[500],
+      color: primitives.colors.brand[600],
       offset: primitives.spacing[1],
     },
     disabled: {
